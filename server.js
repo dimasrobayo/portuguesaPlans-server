@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const app = express();
 const http = require('http');
@@ -17,6 +18,7 @@ const addressRoutes = require('./routes/addressRoutes');
 const orderRoutes = require('./routes/orderRoutes');
 
 const port = process.env.PORT || 4004;
+const host = process.env.DB_HOST || 'localhost';
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({
@@ -35,7 +37,7 @@ const upload = multer({
     storage: multer.memoryStorage()
 })
 
-server.listen(port, '192.168.1.105' || 'localhost', function(){
+server.listen(port, host, function(){
     console.log('/////////////////////////////////////////////////////////////////////');
     console.log('//SERVIDOR ORDER NOW EN LINEA en el puerto '+  + port + ' Iniciada...//');
     console.log('/////////////////////////////////////////////////////////////////////');
