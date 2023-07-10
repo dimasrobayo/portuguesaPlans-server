@@ -39,7 +39,7 @@ const upload = multer({
 
 server.listen(port, host, function(){
     console.log('/////////////////////////////////////////////////////////////////////');
-    console.log('//SERVIDOR ORDER NOW EN LINEA en el puerto '+  + port + ' Iniciada...//');
+    console.log('//SERVIDOR ORDER NOW EN LINEA en '+ host + ':' + port + ' Iniciada...//');
     console.log('/////////////////////////////////////////////////////////////////////');
 });
 
