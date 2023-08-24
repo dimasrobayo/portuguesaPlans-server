@@ -18,7 +18,7 @@ const addressRoutes = require('./routes/addressRoutes');
 const orderRoutes = require('./routes/orderRoutes');
 
 const port = process.env.PORT || 4004;
-const host = process.env.DB_HOST || 'localhost';
+const host = process.env.HOST || 'localhost';
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({

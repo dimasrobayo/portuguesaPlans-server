@@ -1,4 +1,4 @@
-USE ordernow;
+USE portuguesaPlan;
 
 CREATE TABLE users(
 	id bigint primary key auto_increment,
